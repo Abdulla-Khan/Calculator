@@ -1,6 +1,6 @@
 # Calculator in Flutter
 
-A functioning calculator made using Dart and Flytter
+A functioning calculator made using Dart and Flutter
 
 
 
