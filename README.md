@@ -1,6 +1,7 @@
 # Calculator in Flutter
 
 A functioning calculator made using Dart and Flutter.
+
 Clone main repo if you want a Simple Theme and master for Dynamic Theme with some extra functions.
 
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
