@@ -1,6 +1,6 @@
-import 'package:flutter/animation.dart';
+// ignore_for_file: use_key_in_widget_constructors, non_constant_identifier_names, prefer_const_constructors, deprecated_member_use, sized_box_for_whitespace
+
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:math_expressions/math_expressions.dart';
 import 'package:flutter/material.dart';
 
@@ -9,11 +9,12 @@ void main() {
 }
 
 class Calculator extends StatelessWidget {
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Calculator",
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(primarySwatch: Colors.blueGrey),
       home: SimpleCalculator(),
     );
   }
@@ -37,7 +38,7 @@ class _SimpleCalculatorState extends State<SimpleCalculator> {
         result = "0";
         equationFontSize = 38.0;
         resultFontSize = 48.0;
-      } else if (buttonText == "Clear") {
+      } else if (buttonText == "Back") {
         equationFontSize = 38.0;
         resultFontSize = 48.0;
         equation = equation.substring(0, equation.length - 1);
@@ -97,7 +98,8 @@ class _SimpleCalculatorState extends State<SimpleCalculator> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Simple Calculator")),
+      backgroundColor: Colors.grey,
+      appBar: AppBar(title: Text("Calculator")),
       body: Column(
         children: <Widget>[
           Container(
@@ -127,9 +129,9 @@ class _SimpleCalculatorState extends State<SimpleCalculator> {
                 child: Table(
                   children: [
                     TableRow(children: [
-                      BuildButton("C", 1, Colors.redAccent),
-                      BuildButton("Clear", 1, Colors.blue),
-                      BuildButton("÷", 1, Colors.blue),
+                      BuildButton("C", 1, Colors.deepOrange),
+                      BuildButton("Back", 1, Colors.deepOrange),
+                      BuildButton("÷", 1, Colors.deepOrange),
                     ]),
                     TableRow(children: [
                       BuildButton("7", 1, Colors.black54),
@@ -158,16 +160,16 @@ class _SimpleCalculatorState extends State<SimpleCalculator> {
                 width: MediaQuery.of(context).size.width * 0.25,
                 child: Table(children: [
                   TableRow(children: [
-                    BuildButton("×", 1, Colors.blue),
+                    BuildButton("×", 1, Colors.deepOrange),
                   ]),
                   TableRow(children: [
-                    BuildButton("+", 1, Colors.blue),
+                    BuildButton("+", 1, Colors.deepOrange),
                   ]),
                   TableRow(children: [
-                    BuildButton("-", 1, Colors.blue),
+                    BuildButton("-", 1, Colors.deepOrangeAccent),
                   ]),
                   TableRow(children: [
-                    BuildButton("=", 2, Colors.redAccent),
+                    BuildButton("=", 2, Colors.deepOrange),
                   ]),
                 ]),
               )
